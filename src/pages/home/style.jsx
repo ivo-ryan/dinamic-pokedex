@@ -8,13 +8,9 @@ export const Global = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
     }
 
-    #root{
-        height: 100vh;
-    }
-
 `;
 
-export const Ul = styled.ul`
+export const Ul = styled.div`
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -58,13 +54,13 @@ export const ButtonViewMore = styled.button`
 `;
 
 export const Container = styled.div`    
-        transition: 0.3s ease-in;  
+        transition: 0.3s ease-in; 
+        min-height: 100vh; 
+        background: ${props => props.theme.divBackground};
         
 `;
 
-export const PokemonsContainer = styled.div`
-            min-height: 89vh;
-            background: ${props => props.theme.divBackground};
+export const PokemonsContainer = styled.div`         
             text-align: center;
             
 `;

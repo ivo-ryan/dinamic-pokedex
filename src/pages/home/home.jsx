@@ -3,12 +3,15 @@ import { ButtonViewMore, Container, PokemonsContainer, Ul } from "./style";
 import { Navbar } from "../../components/header";
 import { Products } from "../../components/products";
 import { ThemeContext } from "../../context";
+import { Loader } from "../../components/loader/loader";
 
 
 export const Home = ( ) => {
     
     const [ limit, setLimit ] = useState(10);
-    const { theme } = useContext(ThemeContext)
+    const { theme } = useContext(ThemeContext);
+    const [ isLoading, setIsLoading ] = useState(false)
+
 
     const handleLimit = () => {
         setLimit(limit + 10)
@@ -21,13 +24,17 @@ export const Home = ( ) => {
 
     return (
         
-        <Container >
+        <Container  theme={theme}>
 
             <Navbar />
            
-        <PokemonsContainer  theme={theme}>
+        <PokemonsContainer >
+
+            
+        { isLoading && <Loader/> }
+
             <Ul>
-               <Products limit ={limit}/>
+               <Products limit ={limit} setIsLoading={setIsLoading}/>
             </Ul>
   
 

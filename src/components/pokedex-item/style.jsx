@@ -10,7 +10,6 @@ export const  Li = styled.li`
             width: 200px;
             height: 200px;
             background: ${props => props.theme.cardBackground};
-            color: ${props => props.theme.color};
             padding-bottom: 15px;
             position: relative;
             margin-bottom: 25px;
@@ -22,6 +21,7 @@ export const  Li = styled.li`
 
             h4{
                 padding: 10px 0;
+                color: ${props => props.theme.color};
             }
 
             p span + span{
@@ -79,4 +79,5 @@ export const Details = styled.p`
 
 export const Types = styled.p`
             padding-bottom: 15px;
+            color: white;
 `;

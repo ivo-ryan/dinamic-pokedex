@@ -6,19 +6,13 @@ export const IconContainer = styled.div`
             justify-content: space-between;
             align-items: center;
             margin-left: 20px;
-
+            color: ${props => props.theme.color};
+            
             p span {
                   padding: 0 5px;
             }
-  `;
-
-  export const InfoContainer = styled.div`
-            display: flex;
-
-            p{
-                svg{
-                    color: white;
-                }
+            svg{
+                cursor: pointer;
             }
 
             span{
@@ -46,7 +40,13 @@ export const IconContainer = styled.div`
                     width: 16px;
                 }
             }
+  
   `;
+
+  export const InfoContainer = styled.div`
+            display: flex;
+
+           `
 
   export const ProductStyle = styled.div`
             display: flex;
@@ -82,6 +82,7 @@ export const IconContainer = styled.div`
 export const Name = styled.p`
     font-weight: 700;
     font-size: 18px;
+    color: black;
 
     @media(max-width: 425px) {
         font-size: 15px;

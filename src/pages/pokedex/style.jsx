@@ -6,7 +6,6 @@ export const Ul = styled.ul`
         flex-wrap: wrap;
         list-style:none;
         gap: 10px;
-        background: ${props => props.theme.divBackground};
 
         a{
             text-decoration: none;
@@ -19,7 +18,7 @@ export const PokedexContainer = styled.div`
 `;
 
 export const Container = styled.div`
-        height: 100vh;
+        min-height: 100vh;
         background: ${props => props.theme.divBackground};
         transition: 0.3s ease-in;
 `;

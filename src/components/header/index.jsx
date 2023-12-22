@@ -18,16 +18,7 @@ export const Navbar = ( { hide, hideProfile } ) => {
     const [ cartIsInvisible, setCartIsInvisible ] = useState('');
     const { theme } = useContext(ThemeContext)
 
-    // const dispatch = useDispatch();
-    // const { current } = useSelector(rootReducer => rootReducer.userReducer) ;
-    
-    // const handleLoginClick = () => {
-    //     dispatch(userLogin({name: "Ivo Ryan" , operação:"Funcionou ccom sucesso"}))
-    // }
 
-    // const handleLogoutClick = () => {
-    //     dispatch(userLogout())
-    // }
 
     const { products } = useSelector(rootReducer => rootReducer.cartReducer) ;
 

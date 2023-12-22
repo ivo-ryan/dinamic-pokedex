@@ -27,7 +27,7 @@ export const ProductList = ({ id, sprites, name, types, moves, abilities , index
                                 
                                 <img src={sprites?.other.dream_world.front_default } alt={name}/>
 
-                                <Name>{name}</Name>
+                                <Name theme={theme}>{name}</Name>
                 
                                 <AddProduct onClick={handleProductCartToClick} theme={theme}>Adicionar ao Carrinho</AddProduct>
                             </Li>

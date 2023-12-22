@@ -2,8 +2,9 @@ import { useContext } from "react"
 import { Navbar } from "../header"
 import { ContainerAbout, Id, ProfileContainer, SectionContainer, InfoContainer, TypesContainer, TypeName } from "./style"
 import { ThemeContext } from "../../context"
+import { Loader } from "../loader/loader"
 
-export const ProfileItem = ({ pokemon, moves , ability }) => {
+export const ProfileItem = ({ pokemon, moves , ability,isLoading }) => {
 
     const { theme } = useContext(ThemeContext)
 
@@ -16,6 +17,9 @@ export const ProfileItem = ({ pokemon, moves , ability }) => {
         <ProfileContainer>
         
         <InfoContainer>
+
+        { isLoading && <Loader/> }
+
             <Id>#{pokemon.id}</Id>
 
             <img src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name}/>

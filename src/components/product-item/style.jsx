@@ -27,11 +27,11 @@ export const AddProduct = styled.button`
 export const Name = styled.p`
             padding: 5px 0;
             font-weight: 700;
+            color: ${props => props.theme.color};
 
 `;
 
 export const Li = styled.li`
-            background: ${props => props.theme.cardBackground};
-            color: ${props => props.theme.color};
+            background-color: ${props => props.theme.cardBackground};
             transition: 0.3s ease-in;
 `;
