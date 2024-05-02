@@ -32,7 +32,7 @@ export const PokedexItem = ({id, types, name, moves, abilities, sprites, index})
                         </Types>
 
                         <Link to={"/profile"}>
-                        <Details>
+                        <Details theme={theme} >
                          View Details
                         </Details>
                         </Link>

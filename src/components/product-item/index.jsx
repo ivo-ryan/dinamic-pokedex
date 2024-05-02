@@ -5,7 +5,7 @@ import { AddProduct,  Id, Li, Name } from "./style";
 import { useContext } from "react";
 import { ThemeContext } from "../../context";
 
-export const ProductList = ({ id, sprites, name, types, moves, abilities , index}) => {
+export const ProductList = ({ id, sprites, name, types, moves, abilities , index, loading }) => {
 
     const { theme } = useContext(ThemeContext)
     

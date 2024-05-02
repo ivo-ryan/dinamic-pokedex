@@ -31,12 +31,12 @@ export const Home = ( ) => {
         <PokemonsContainer >
 
             
-        { isLoading && <Loader/> }
 
             <Ul>
                <Products limit ={limit} setIsLoading={setIsLoading}/>
             </Ul>
   
+        { isLoading && <Loader/> }
 
                  {limit < 1292 && (<ButtonViewMore onClick={handleLimit}>View More</ButtonViewMore>) }   
                 

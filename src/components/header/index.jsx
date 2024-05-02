@@ -1,16 +1,13 @@
-// import { userLogin, userLogout } from "../../redux/user/actions";
 import { useContext, useMemo, useState } from "react";
 import { Cart } from "../cart";
-import { Button, EnterCart, Header, Img, ImgNav } from "./style";
+import { Button, EnterCart, Header, Img, ImgNav, ThemeContainer } from "./style";
 import {  useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../../context";
 import { ThemeButton } from "../theme-button";
 import  logo  from "../../assets/logo.png";
-
-
-
-
+import {AiOutlineShoppingCart} from 'react-icons/ai';
+import Pokebola from '../../assets/pokebola.png';
 
 
 export const Navbar = ( { hide, hideProfile } ) => {
@@ -48,28 +45,31 @@ export const Navbar = ( { hide, hideProfile } ) => {
            )}
                
 
-            <div>
-        { hide || hideProfile ? null : (
-        <EnterCart onClick={handleCartClick} >Carrinho ({productsCount})</EnterCart>)}
-
-        
-           
+            <ThemeContainer theme={theme}>
 
              <Cart isVisible={cartIsInvisible} setIsVisible={setCartIsInvisible}/>
 
-          {hide || hideProfile ? null : (
+          {hide || hideProfile ? <div></div> : (
 
             <Link to={"/pokedex"}>
             <Button >
-            Pokedex
+            <p>Pokedex</p>
+
+            <img src={Pokebola} alt="pokebola" />
             </Button>
             </Link>
           )}
            
           
-           
+        { hide || hideProfile ? <div></div> : (
+        <EnterCart onClick={handleCartClick} >
+            <p> {productsCount}</p>
+            <AiOutlineShoppingCart/> 
+           </EnterCart>)}
+
            <ThemeButton/>
-            </div>
+           
+            </ThemeContainer>
 
         </Header>
     )

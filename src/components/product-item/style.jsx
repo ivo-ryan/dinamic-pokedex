@@ -4,7 +4,6 @@ export const Id = styled.p`
             display:flex;
             justify-content: flex-end;
             width: 80%;
-            padding-top: 20px;
             font-size: 18px;
             font-weight: 800;
             color: orange;
@@ -12,26 +11,38 @@ export const Id = styled.p`
 
 export const AddProduct = styled.button`
             background-color: orange;
-            color: ${props => props.theme.color};
-            border-radius: 30px;
-            cursor: pointer;
-            border: 0;
-            padding: 10px;
-            font-weight: 700;
-            transition: 0.3s ease-in-out;
-            margin-bottom: 20px;
-
+            color: #fff;
+                cursor: pointer;
+                background-color: #AA1DEF;
+                    border-radius: 40px;
+                    box-shadow: 0 0 10px #AA1DEF;
+                    text-decoration: none;
+                    padding: 4px 6px;
+                    font-weight: 600;
+                    font-size: 14px ;
+                    transition: .5s ease-in;
+                    border: none;
+    
+                    &:hover{
+                        box-shadow: none;
+                    }
 
 `;
 
 export const Name = styled.p`
-            padding: 5px 0;
             font-weight: 700;
-            color: ${props => props.theme.color};
+            color: #fff;
 
 `;
 
 export const Li = styled.li`
-            background-color: ${props => props.theme.cardBackground};
+            background-color: rgb(47, 28, 101);
             transition: 0.3s ease-in;
+            max-width: 200px;
+            height: 200px;
+            padding: 10px 0;
+
+            img{
+                filter: drop-shadow( 5px 5px 3px #111);
+            }
 `;

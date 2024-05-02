@@ -9,7 +9,7 @@ export const  Li = styled.li`
             border-radius: 8px;
             width: 200px;
             height: 200px;
-            background: ${props => props.theme.cardBackground};
+            background: rgb(47, 28, 101);
             padding-bottom: 15px;
             position: relative;
             margin-bottom: 25px;
@@ -21,7 +21,7 @@ export const  Li = styled.li`
 
             h4{
                 padding: 10px 0;
-                color: ${props => props.theme.color};
+                color: #fff;
             }
 
             p span + span{
@@ -50,7 +50,7 @@ export const Id = styled.p`
             width: 80%;
             font-weight: 700;
             color: orange;
-            padding-top: 5px;
+            padding-top: 10px;
             font-size: 16px;
 `;
 
@@ -59,22 +59,25 @@ export const Details = styled.p`
             display: flex;
             justify-content: center;
             width: 110px;
-            font-size: 14px;
-            font-weight: 600;
-            background-color: orange;
-            color: white;
-            padding: 6px 5px;
-            border-radius: 10px;
-            position: absolute;
-            z-index: 1;
-            bottom: -9%;
-            left: 24%;
-            transition : 0.3s ease-in;
-
-            &:hover{
-                color: black;
-                background: rgb(251, 84, 23);
-            }
+            color: #efefef;
+            cursor: pointer;
+                background-color: #AA1DEF;
+                    border-radius: 40px;
+                    box-shadow: 0 0 10px #AA1DEF;
+                    text-decoration: none;
+                    padding: 4px 6px;
+                    font-weight: 600;
+                    font-size: 14px ;
+                    transition: .5s ease-in;
+                    position: absolute ;
+                    z-index: 1;
+                    bottom: -9%;
+                    left: 24%;
+                    border: none;
+    
+                    &:hover{
+                        box-shadow: none;
+                    }
 `;
 
 export const Types = styled.p`

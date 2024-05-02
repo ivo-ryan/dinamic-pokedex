@@ -10,7 +10,7 @@ export const  themes = {
     dark:{
         headerBackground: "rgb(28, 78, 101)",
         divBackground: "rgb(29, 18, 63)",
-        cardBackground:" rgb(47, 28, 101)",
+        cardBackground:" rgb(3, 0, 11)",
         color:"white"
     }
 };

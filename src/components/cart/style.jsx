@@ -4,6 +4,7 @@ export const CartContainer = styled.div`
   position: fixed;
   height: 100vh;
   width: 100vw;
+  z-index: 10;
   right: 0;
   bottom: 0;
   top: 0;
