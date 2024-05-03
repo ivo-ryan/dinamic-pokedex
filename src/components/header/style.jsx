@@ -91,7 +91,7 @@ export const ThemeContainer = styled.nav`
                 display: flex;
         }
 
-        @media (max-width: 425px) {
+        @media (max-width: 450px) {
                 display: ${props => props.display};
                 position: absolute;
                 z-index: 10;
@@ -118,11 +118,7 @@ export const Button = styled.button`
         cursor: pointer;
         color: white;
         font-weight: 600;
-        width: 100px;
-
-        @media (max-width: 425px) {
-                width: 70px;
-        }
+        width: 70px;
 
         img{ 
                 border-radius: 50% ;
