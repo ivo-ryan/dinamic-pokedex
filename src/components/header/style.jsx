@@ -23,7 +23,7 @@ export const Header = styled.header`
             display: none;
           }
 
-          @media (max-width: 425px) {
+          @media (max-width: 450px) {
                 #menu-icon {
                 display: block;              
             }
