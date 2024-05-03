@@ -44,5 +44,15 @@ export const Li = styled.li`
 
             img{
                 filter: drop-shadow( 5px 5px 3px #111);
+                transition: all .5s ease;
             }
+
+            
+            &:hover{
+                    img{transform: scale(1.2);}
+                }
+
+                @media (max-width: 425px) {
+                    max-width: 180px;
+                }
 `;

@@ -28,7 +28,7 @@ export const CartContainer = styled.div`
         background: ${props => props.theme.divBackground};
         position: fixed;
         height: 100%;
-        padding:20px;
+        padding: 20px;
         margin: 0 20px;
         color: black;
         width: 400px;
@@ -50,11 +50,23 @@ export const CartContainer = styled.div`
           }
 
           @media (max-width: 425px) {
-                width: 230px;
+                right: -10px;
+                width: 270px;
           }
 
           h3{
             color: ${props => props.theme.color}
           }
 
+  `;
+
+  export const SvgContainer = styled.div`
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+
+            svg{
+              font-size: 30px;
+              color: #ffa500;
+            }
   `;

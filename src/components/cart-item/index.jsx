@@ -1,5 +1,6 @@
-import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai";
-import { IconContainer, Id, InfoContainer, Name, ProductStyle } from "./style"
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import {BiXCircle} from 'react-icons/bi'
+import { AddAndRemove, IconContainer, Id, InfoContainer, Name, ProductStyle } from "./style"
 import { useDispatch } from "react-redux";
 import { decreaseProduct, increaseProduct, removeProductToCart } from "../../redux/cart/actions";
 import { useContext } from "react";
@@ -35,15 +36,18 @@ export const CartItem = ({ product }) => {
             </ProductStyle>
 
             <IconContainer theme={theme}>
-                <p>
-                    <AiOutlineMinus onClick={handleDecreaseProduct} />
+                <AddAndRemove onClick={handleDecreaseProduct}>
+
+                    <AiOutlineMinus  />
+
+                    </AddAndRemove>
 
                     <span>{product.quantity}</span>
+                    <AddAndRemove  onClick={handleIncreaseProduct}>
+                    <AiOutlinePlus  />
+                    </AddAndRemove>
 
-                    <AiOutlinePlus onClick={handleIncreaseProduct} />
-                </p>
-
-                <AiOutlineClose onClick={handleRemoveProducts} className="remove"/>
+                <BiXCircle onClick={handleRemoveProducts} className="remove"/>
 
             </IconContainer>
 

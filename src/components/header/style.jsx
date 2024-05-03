@@ -2,13 +2,37 @@ import styled from "styled-components";
 
 export const Header = styled.header`
         display: flex;
-        height: 80px;
+        width: 100%;
+        min-height: 80px;
         padding: 10px;
         align-items: center;
         justify-content: space-between;
         transition: 0.3s ease-in;
         background: ${props => props.theme.headerBackground};
         color: ${props => props.theme.color};
+
+        #menu-icon{
+            font-size: 25px ;
+            color: #fff;
+            display: none;
+          }
+          
+          .bx-x{
+            font-size: 25px ;
+            color: red;
+            display: none;
+          }
+
+          @media (max-width: 425px) {
+                #menu-icon {
+                display: block;              
+            }
+
+            .bx-x {
+                display: block;       
+            }
+        
+          }
 
     
 `;
@@ -35,16 +59,17 @@ export const EnterCart = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
 
         svg{
                 font-size: 26px;
-                color: orange;
-                position: relative;
+                color: orange;       
         }
 
         p{
                 position: absolute;
-                top: 9px;
+                top: -20px;
+                margin-left: 5px;
                 font-size: 14px;
                 background-color: #fff;
                 font-weight: 700;
@@ -55,15 +80,31 @@ export const EnterCart = styled.div`
 `;
 
 
-export const ThemeContainer = styled.div`
+export const ThemeContainer = styled.nav`
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        width: 30%;
+        list-style: none;
+        width: 40%;
+
+        li{
+                display: flex;
+        }
 
         @media (max-width: 425px) {
-                gap: 10px;
-                width: 40%;
+                display: ${props => props.display};
+                position: absolute;
+                z-index: 10;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                gap: 20px;
+                width: 100%;
+                min-height: 80px;
+                background-color: ${props => props.theme.headerBackground}; 
+                li{
+                        flex-direction: column;
+                }
         }
 `;
 

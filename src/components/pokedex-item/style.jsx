@@ -15,10 +15,6 @@ export const  Li = styled.li`
             margin-bottom: 25px;
             transition: 0.3s ease-in;
 
-            &:hover{
-
-            }
-
             h4{
                 padding: 10px 0;
                 color: #fff;
@@ -28,9 +24,11 @@ export const  Li = styled.li`
                 margin-left: 10px;
             }
             img{
-                filter: drop-shadow(15px 15px 4px #232323);
+                filter: drop-shadow( 7px 5px 4px #232323);
                 width: 80px;
                 height: 80px;
+                transition: all .5s ease;
+                
             }
 
             span{
@@ -39,6 +37,10 @@ export const  Li = styled.li`
                 padding: 5px 8px;
                 border-radius: 10px;
             }
+
+            &:hover{
+                    img{transform: scale(1.3);}
+                }
 
 
            

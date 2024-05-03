@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
-import { ButtonViewMore, Container, PokemonsContainer, Ul } from "./style";
+import { ButtonViewMore, Container, ContainerButton, PokemonsContainer, Ul } from "./style";
 import { Navbar } from "../../components/header";
 import { Products } from "../../components/products";
 import { ThemeContext } from "../../context";
 import { Loader } from "../../components/loader/loader";
+import Pokebola from '../../assets/pokebola.png';
 
 
 export const Home = ( ) => {
@@ -38,10 +39,17 @@ export const Home = ( ) => {
   
         { isLoading && <Loader/> }
 
-                 {limit < 1292 && (<ButtonViewMore onClick={handleLimit}>View More</ButtonViewMore>) }   
+                 {limit < 1292 && 
+                 (<ContainerButton>
+                 <ButtonViewMore onClick={handleLimit}><p>View More</p> <img src={Pokebola} alt="pokebola" /></ButtonViewMore>
+                 </ContainerButton>
+                 ) }   
                 
 
-                {limit > 10 && (<ButtonViewMore onClick={handleResetList}> Reset list</ButtonViewMore>)}
+                {limit > 10 && (<ContainerButton>
+                <ButtonViewMore onClick={handleResetList}><p> Reset list</p></ButtonViewMore>
+                </ContainerButton>
+                )}
              
         </PokemonsContainer>
                 
