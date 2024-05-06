@@ -3,8 +3,8 @@
 Esse projeto têm como objetivo fazer com que o usuário selecione o pokemons de sua escolha , e os adicione em um carrinho , posteriormente os pokemons selecionados podem ser observados em outra página , com a opção de exibir os detalhes dos mesmos individualmente .
 
 [
-<img src="" alt="Pokedex dinâmica"/>
-]
+<img src="./dinamic-pokedex.gif" alt="Pokedex dinâmica"/>
+](https://create-your-pokedex.vercel.app/)
 
 ## Tecnologias usadas
 - React
