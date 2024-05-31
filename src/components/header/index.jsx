@@ -49,7 +49,7 @@ export const Navbar = ( { hide, hideProfile } ) => {
             setMenu(true);
             setDisplay(viewDisplay.hidde)
         }
-    }
+    };
   
     return (
         <Header theme={theme}>
@@ -68,6 +68,8 @@ export const Navbar = ( { hide, hideProfile } ) => {
             </Link>
            )}
 
+            <div className="containerSvg">
+
            {
             menu === true && (<AiOutlineMenu id='menu-icon'  onClick={() => handleClickMenu() } /> ) 
         }
@@ -76,9 +78,9 @@ export const Navbar = ( { hide, hideProfile } ) => {
             bx === true && (<BiXCircle className='bx-x'  onClick={() => handleClickMenu() }  /> )   
         }
        
-               
+         </div>      
 
-            <ThemeContainer theme={theme} display={display}>
+            <ThemeContainer theme={theme} display={display} className="container-theme">
 
              <Cart isVisible={cartIsInvisible} setIsVisible={setCartIsInvisible}/>
 

@@ -11,19 +11,23 @@ export const Header = styled.header`
         background: ${props => props.theme.headerBackground};
         color: ${props => props.theme.color};
 
-        #menu-icon{
+
+        svg{
             font-size: 25px ;
+            cursor: pointer;
+        }
+
+        #menu-icon{
             color: #fff;
             display: none;
           }
           
           .bx-x{
-            font-size: 25px ;
             color: red;
             display: none;
           }
 
-          @media (max-width: 450px) {
+          @media (max-width: 768px) {
                 #menu-icon {
                 display: block;              
             }
@@ -91,7 +95,7 @@ export const ThemeContainer = styled.nav`
                 display: flex;
         }
 
-        @media (max-width: 450px) {
+        @media (max-width: 768px) {
                 display: ${props => props.display};
                 position: absolute;
                 z-index: 10;
